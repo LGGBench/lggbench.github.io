@@ -1,23 +1,25 @@
 ---
 layout: default
-title: Results
+title: Evaluation Results
 description: Evaluating graph generation methodologies.
 ---
 
 # Graph Datasets
 
-| Type | Dataset | Net. Type | \#Nodes | \#Edges | \#Feats. | \#Cls. |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Homo. | Amazon-Photo \citep{shchur2018pitfalls} | Item | 7,650 | 238,162 | 745 | 8 |
-|  | Amazon-Computers \citep{shchur2018pitfalls} | Item | 13,752 | 491,722 | 767 | 10 |
-|  | Pubmed \citep{kipf2016semi} | Citation | 19,717 | 44,338 | 500 | 3 |
-|  | T-Finance \citep{tang2022rethinking} | Social | 39,357 | 21,222,543 | 10 | 2 |
-|  | Flickr \citep{zeng2019graphsaint} | Item | 89,250 | 449,878 | 500 | 7 |
-|  | Ogbn-arxiv \citep{hu2020open} | Citation | 169,343 | 1,157,799 | 128 | 40 |
-|  | Bitcoin \citep{weber2019anti} | Item | 203,769 | 234,355 | 165 | 2 |
-| Hetero. | IMDB \citep{fu2020magnn} | Item | 11,616 | 17,106 | 3,066 | 3 |
-|  | Amazon-Fraud \citep{tang2022rethinking} | Social | 11,944 | 4,398,392 | 25 | 2 |
-|  | Yelp-Fraud \citep{tang2022rethinking} | Item | 45,954 | 3,846,979 | 32 | 2 |
+| Dataset | Network Type | \#Nodes | \#Edges | \#Features | \#Classes | Source |
+|:---:|:---:|:---:|:---:|:---:|:---:|---|
+| Amazon-Photo | Item | 7,650 | 238,162 | 745 | 8 | [Link](https://arxiv.org/abs/1811.05868) |
+| Amazon-Computers | Item | 13,752 | 491,722 | 767 | 10 | [Link](https://arxiv.org/abs/1811.05868) |
+| Pubmed | Citation | 19,717 | 44,338 | 500 | 3 | [Link](https://github.com/tkipf/gcn) |
+| T-Finance | Social | 39,357 | 21,222,543 | 10 | 2 | [Link](https://github.com/squareRoot3/Rethinking-Anomaly-Detection) |
+| Flickr | Item | 89,250 | 449,878 | 500 | 7 | [Link](https://github.com/GraphSAINT/GraphSAINT) |
+| Ogbn-arxiv | Citation | 169,343 | 1,157,799 | 128 | 40 | [Link](https://ogb.stanford.edu/docs/nodeprop/#ogbn-arxiv) |
+| Bitcoin | Item | 203,769 | 234,355 | 165 | 2 | [Link](https://www.kaggle.com/datasets/ellipticco/elliptic-data-set) |
+| IMDB | Item | 11,616 | 17,106 | 3,066 | 3 | [Link](https://github.com/cynricfu/MAGNN) |
+| Amazon-Fraud | Social | 11,944 | 4,398,392 | 25 | 2 | [Link](https://github.com/squareRoot3/Rethinking-Anomaly-Detection) |
+| Yelp-Fraud | Item | 45,954 | 3,846,979 | 32 | 2 | [Link](https://github.com/squareRoot3/Rethinking-Anomaly-Detection) |
+
+We adopt the widely used node classification datasets in different domains and provide statistics.
 
 # Fidelity
 
