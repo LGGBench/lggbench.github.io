@@ -58,7 +58,7 @@ Graph utility metrics for Ogbn-arxiv. Pearson and Spearman correlations are calc
 
 # Scalability
 
-| Generator \ VRAN (GB) \ Generation Size | 1,000 | 5,500 | 10,000 | 100,000 |
+| Generator \ VRAM (GB) \ Generation Size | 1,000 | 5,500 | 10,000 | 100,000 |
 |:---:|:---:|:---:|:---:|:---:|
 | GraphRNN | 2.8 | 2.8 | 2.8 | 2.8 |
 | GraphVAE | 3.5 | 3.5 | 3.5 | 3.5 |
