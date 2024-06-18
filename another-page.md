@@ -25,7 +25,7 @@ We adopt the widely used node classification datasets in different domains and p
 
 |  | Deviation of Graph-level Statistics (↓) |  |  |  |  |  | Node-level MMD (↓) |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Generator | PLE | Ent | Homo\% | CC | BC | CF | CC | CF |
+| Generator | PLE | Ent | Homo% | CC | BC | CF | CC | CF |
 | G.RNN | 0.22 | 0.0233 | 48.53 | 0.2641 | 0.0030 | 0.1209 | 0.1339 | 0.0657 |
 | G.VAE | 0.21 | 0.0143 | 56.77 | 0.4269 | 0.0013 | 0.4112 | 0.3320 | 0.1307 |
 | G.GMG | 0.23 | 0.0113 | 58.99 | 0.4634 | 0.0011 | 0.0110 | 0.3892 | 0.1954 |
@@ -41,7 +41,7 @@ Graph fidelity metrics for Ogbn-arxiv. The deviation of graph-level statistics i
 
 # Utility
 
-| Generator | Pearson (↑) | Spearman (↑) | Transfer Accuracy\% (↑) |
+| Generator | Pearson (↑) | Spearman (↑) | Transfer Accuracy% (↑) |
 |:---:|:---:|:---:|:---:|
 | GraphRNN | 0.7880 | 0.8286 | 43.2±0.3 |
 | GraphVAE | 0.5683 | 0.6000 | 40.2±0.7 |
