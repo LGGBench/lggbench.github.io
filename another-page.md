@@ -23,7 +23,7 @@ We adopt the widely used node classification datasets in different domains and p
 
 # Fidelity
 
-|  | Deviation of Graph-level Statistics ($\downarrow$) |  |  |  |  |  | Node-level MMD ($\downarrow$) |  |
+|  | Deviation of Graph-level Statistics (↓) |  |  |  |  |  | Node-level MMD (↓) |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Generator | PLE | Ent | Homo\% | CC | BC | CF | CC | CF |
 | G.RNN | 0.22 | 0.0233 | 48.53 | 0.2641 | 0.0030 | 0.1209 | 0.1339 | 0.0657 |
@@ -41,52 +41,51 @@ Graph fidelity metrics for Ogbn-arxiv. The deviation of graph-level statistics i
 
 # Utility
 
-| Category | Generator | Pearson ($\uparrow$) | Spearman ($\uparrow$) | TransferAcc\% ($\uparrow$) | RefAcc\% |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| Set Gen. | GraphRNN \citep{you2018graphrnn} | 0.7880 | 0.8286 | \ms{43.2}{0.3} | \ms{71.4}{0.1} |
-|  | GraphVAE \citep{simonovsky2018graphvae} | 0.5683 | 0.6000 | \ms{40.2}{0.7} |  |
-|  | GraphGMG \citep{li2018learning} | 0.7415 | 0.6571 | \ms{42.2}{0.5} |  |
-|  | CGT \citep{yoon2023graph} | 0.9718 | 0.7537 | \ms{56.3}{0.4} |  |
-| Scalable | GraphMaker \citep{li2023graphmaker} | 0.8668 | 0.8857 | \ms{59.3}{0.1} |  |
-|  | SBM \citep{holland1983stochastic} | 0.3996 | 0.6000 | \ms{46.6}{0.1} |  |
-| Reduction | GCond \citep{jin2021graph} | 0.8738 | 0.8659 | \ms{59.2}{0.4} |  |
-|  | DosCond \citep{jin2022condensing} | 0.9654 | 0.9429 | \ms{\textbf{60.9}}{0.3} |  |
-|  | Coarsen \citep{huang2021scaling} | 0.2545 | 0.0137 | \ms{27.4}{1.7} |  |
-|  | Herding \citep{welling2009herding} | 0.8546 | 0.8857 | \ms{58.4}{0.1} |  |
+| Generator | Pearson (↑) | Spearman (↑) | Transfer Accuracy\% (↑) |
+|:---:|:---:|:---:|:---:|
+| GraphRNN | 0.7880 | 0.8286 | 43.2±0.3 |
+| GraphVAE | 0.5683 | 0.6000 | 40.2±0.7 |
+| GraphGMG | 0.7415 | 0.6571 | 42.2±0.5 |
+| CGT | 0.9718 | 0.7537 | 56.3±0.4 |
+| GraphMaker | 0.8668 | 0.8857 | 59.3±0.1 |
+| SBM | 0.3996 | 0.6000 | 46.6±0.1 |
+| GCond | 0.8738 | 0.8659 | 59.2±0.4 |
+| DosCond | 0.9654 | 0.9429 | 60.9±0.3 |
+| Coarsen | 0.2545 | 0.0137 | 27.4±1.7 |
+| Herding | 0.8546 | 0.8857 | 58.4±0.1 |
 
-Graph utility metrics for Ogbn-arxiv. Pearson and Spearman correlations are calculated on the accuracy scores across an array of graph models separately trained on two graphs. TransferAcc is evaluated by first training a GCN model on the synthetic graph, then report the accuracy of the trained model on the target graph. A referential accuracy (RefAcc) is given by training and evaluating the same GCN model on the target graph.
+Graph utility metrics for Ogbn-arxiv. Pearson and Spearman correlations are calculated on the accuracy scores across an array of graph models separately trained on two graphs. Transfer Accuracy is evaluated by first training a GCN model on the synthetic graph, then report the accuracy of the trained model on the target graph.
 
 # Scalability
 
-|  |  | VRAM (GB) at synthetic sizes ($N'$) |  |  |  |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Category | Generator | 1,000 | 5,500 | 10,000 | 100,000 |
-| Set Generation | GraphRNN | 2.8 | 2.8 | 2.8 | 2.8 |
-|  | GraphVAE | 3.5 | 3.5 | 3.5 | 3.5 |
-|  | GraphGMG | 5.1 | 5.1 | 5.1 | 5.1 |
-|  | CGT | 1.4 | 1.4 | 1.4 | 1.4 |
-| Scalable | GraphMaker | 2.6 | 5.9 | 12.7 | OOM |
-|  | SBM | 0.5 | 0.5 | 0.5 | 0.6 |
-| Reduction | GCond | 5.0 | OOM | OOM | OOM |
-|  | DosCond | 1.2 | 2.2 | 5.6 | OOM |
-|  | Coarsen | 0.0 | 0.0 | 0.0 | 0.0 |
-|  | Herding | 1.6 | 1.6 | 1.6 | 1.6 |
+| Generator \ VRAN (GB) \ Generation Size | 1,000 | 5,500 | 10,000 | 100,000 |
+|:---:|:---:|:---:|:---:|:---:|
+| GraphRNN | 2.8 | 2.8 | 2.8 | 2.8 |
+| GraphVAE | 3.5 | 3.5 | 3.5 | 3.5 |
+| GraphGMG | 5.1 | 5.1 | 5.1 | 5.1 |
+| CGT | 1.4 | 1.4 | 1.4 | 1.4 |
+| GraphMaker | 2.6 | 5.9 | 12.7 | OOM |
+| SBM | 0.5 | 0.5 | 0.5 | 0.6 |
+| GCond | 5.0 | OOM | OOM | OOM |
+| DosCond | 1.2 | 2.2 | 5.6 | OOM |
+| Coarsen | 0.0 | 0.0 | 0.0 | 0.0 |
+| Herding | 1.6 | 1.6 | 1.6 | 1.6 |
 
-Scability evaluation. GPU memory usage (GB) of different graph generation methods when generating different graph sizes. OOM indicates an out-of-memory error on a single V100-SXM2-32GB GPU. Graph set generation methods produce graph sets containing small graphs, which are then combined into a single large graph, incurring a constant memory usage. Methods that directly learn a single large graph, such as GraphMaker, GCond, and DosCond, cannot scale to large synthetic sizes due to the large synthetic graph structure.
+Scability evaluation. GPU memory usage (GB) of different graph generation methods when generating different graph sizes. OOM indicates an out-of-memory error on a single V100-SXM2-32GB GPU. 
 
 # Privacy
 
-| Category | Generator | Attr MSE ($\uparrow$) | Attr Ref | Edge AUC ($\downarrow$) | Edge Ref |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| Set Gen. | GraphRNN | 1.6517 | 0.7458 | 0.7321 | 0.8840 |
-|  | GraphVAE | 5.7220 |  | 0.6315 |  |
-|  | GraphGMG | 5.8524 |  | 0.6944 |  |
-|  | CGT | 0.8122 |  | 0.7315 |  |
-| Scalable | GraphMaker | 0.7992 |  | 0.7661 |  |
-|  | SBM | 1.1321 |  | 0.6035 |  |
-| Reduction | GCond | 1.5670 |  | 0.6662 |  |
-|  | DosCond | 0.7978 |  | 0.7709 |  |
-|  | Coarsen | 1.0595 |  | 0.6137 |  |
-|  | Herding | 0.8088 |  | 0.7617 |  |
+| Generator | Attribute MSE (↑) | Edge AUC (↓) |
+|:---:|:---:|:---:|
+| GraphRNN | 1.6517 | 0.7321 |
+| GraphVAE | 5.7220 | 0.6315 |
+| GraphGMG | 5.8524 | 0.6944 |
+| CGT | 0.8122 | 0.7315 |
+| GraphMaker | 0.7992 | 0.7661 |
+| SBM | 1.1321 | 0.6035 |
+| GCond | 1.5670 | 0.6662 |
+| DosCond | 0.7978 | 0.7709 |
+| Coarsen | 1.0595 | 0.6137 |
+| Herding | 0.8088 | 0.7617 |
 
-Privacy evaluation. Attr MSE: train an attribute inference attack model on the synthetic graph, then evaluate the model on the target graph using mean squared error. Edge AUC: train and evaluate an edge membership inference attack model by measuring the area under the ROC-curve. Ref: The reference metrics are given by training and evaluating the attack model directly on the target graph, which yield the best attack performances. An unsuccessful attack yields high MSE and low AUC, indicating a higher privacy level of the synthetic graph.
+Privacy evaluation. Attribute MSE: train an attribute inference attack model on the synthetic graph, then evaluate the model on the target graph using mean squared error. Edge AUC: train and evaluate an edge membership inference attack model by measuring the area under the ROC-curve. An unsuccessful attack yields high MSE and low AUC, indicating a higher privacy level of the synthetic graph.
